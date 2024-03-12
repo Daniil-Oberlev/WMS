@@ -219,6 +219,7 @@ This diverse technical stack ensures a comprehensive and efficient development e
 - **Cross-Browser Compatibility**: Ensure the Warehouse Management System is compatible with various web browsers for a seamless user experience.
 - **Responsive Design**: Design the system to be responsive, providing a consistent and user-friendly interface across different devices and screen sizes.
 - **Scalability**: Develop the system with scalability in mind, allowing it to handle growing amounts of data and users.
+- **Plan**: the ability to integrate your own plan into the Navy.
 
 ## 🪛 Installation
 
