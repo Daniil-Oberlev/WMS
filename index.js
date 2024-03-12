@@ -2,10 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import connectDB from "./db.js";
-import { registerValidation } from "./validations/auth.js";
-import checkAuth from "./utils/checkAuth.js";
-import * as userController from "./controllers/userController.js";
-import handleValidationErrors from "./utils/handleValidationErrors.js";
+import routes from "./routes.js";
 
 // Загрузка переменных окружения
 dotenv.config();
@@ -19,6 +16,9 @@ app.use(morgan("dev"));
 
 app.use(express.json());
 
+// Подключаем роутер
+app.use("/", routes);
+
 // Обработка ошибок
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -26,16 +26,6 @@ app.use((err, req, res, next) => {
     message: "Что-то пошло не так. Пожалуйста, попробуйте еще раз позже.",
   });
 });
-
-// Определение маршрутов
-app.post("/auth/login", handleValidationErrors, userController.login);
-app.post(
-  "/auth/register",
-  registerValidation,
-  handleValidationErrors,
-  userController.register
-);
-app.get("/auth/me", checkAuth, userController.getMe);
 
 // Запуск сервера
 const PORT = process.env.PORT || 4444;

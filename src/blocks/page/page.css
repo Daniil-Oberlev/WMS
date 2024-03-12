@@ -1,0 +1,4 @@
+.page {
+  min-height: 100vh;
+  background: url("../../images/landscape.jpg") no-repeat center/cover;
+}

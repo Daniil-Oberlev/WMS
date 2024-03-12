@@ -6,10 +6,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: {
     main: "./src/scripts/index.js",
+    /*user: "./src/scripts/user.js", // Путь к вашему второму скрипту
+    analytics: "./src/scripts/analytics.js", // Путь к вашему третьему скрипту
+    */
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
+    filename: "[name].js", // Используем [name] для динамического имени файла
     publicPath: "",
   },
   mode: "development",
@@ -18,6 +21,7 @@ module.exports = {
     open: true,
     compress: true,
     port: 8080,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -58,6 +62,28 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      filename: "index.html",
+      chunks: ["main"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/user.html",
+      filename: "user.html",
+      chunks: ["user"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/analytics.html",
+      filename: "analytics.html",
+      chunks: ["analytics"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pricing.html",
+      filename: "pricing.html",
+      chunks: ["pricing"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/settings.html",
+      filename: "settings.html",
+      chunks: ["settings"],
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
