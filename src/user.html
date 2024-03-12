@@ -1,11 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User</title>
-</head>
-<body>
-    <h1>User</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page">
+    <nav class="sidebar active">
+      <div class="logo-menu">
+        <h2 class="logo">WSC</h2>
+        <i class="bx bx-menu toggle-btn"></i>
+      </div>
+      <ul class="list">
+        <li class="list-item">
+          <a href="./index.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link-name">Dashboard</span>
+          </a>
+        </li>
+        <li class="list-item active">
+          <a href="./user.html">
+            <i class="bx bx-user"></i>
+            <span class="link-name">User</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="./analytics.html">
+            <i class="bx bxs-pie-chart-alt"></i>
+            <span class="link-name">Analytics</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="./pricing.html">
+            <i class="bx bx-chat"></i>
+            <span class="link-name">File Manager</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="./settings.html">
+            <i class="bx bx-cog"></i>
+            <span class="link-name">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="page__title">Страница с информацией по пользователю</h1>
+  </body>
 </html>
