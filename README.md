@@ -155,7 +155,7 @@ The Warehouse Management System is built using a versatile technical stack that 
     <td align="center" width="110" height="90">
       <a href="#">
         <img
-          src="hhttps://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg"
+          src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg"
           width="36"
           height="36"
           alt="C++"
