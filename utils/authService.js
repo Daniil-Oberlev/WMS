@@ -1,10 +1,10 @@
-import jwt from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
-import UserModel from "../models/user.js";
+import UserModel from '../models/user.js';
 
 const generateToken = (userId) => {
-  return jwt.sign({ _id: userId }, "secret123", { expiresIn: "30d" });
+  return jwt.sign({ _id: userId }, 'secret123', { expiresIn: '30d' });
 };
 
 const hashPassword = async (password) => {

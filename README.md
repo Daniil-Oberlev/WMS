@@ -155,7 +155,7 @@ The Warehouse Management System is built using a versatile technical stack that 
     <td align="center" width="110" height="90">
       <a href="#">
         <img
-          src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg"
+          src="hhttps://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg"
           width="36"
           height="36"
           alt="C++"
@@ -199,7 +199,6 @@ The Warehouse Management System is built using a versatile technical stack that 
   </tr>
 </table>
 
-
 - **HTML**: Used for structuring the content and layout of web pages, providing the foundation for the system's user interface.
 - **CSS**: Employed for styling the HTML elements, ensuring an appealing and user-friendly visual presentation of the Warehouse Management System.
 - **JavaScript (JS)**: Used to add interactivity to the system, enabling dynamic updates and responsiveness for an enhanced user experience.
@@ -219,7 +218,6 @@ This diverse technical stack ensures a comprehensive and efficient development e
 - **Cross-Browser Compatibility**: Ensure the Warehouse Management System is compatible with various web browsers for a seamless user experience.
 - **Responsive Design**: Design the system to be responsive, providing a consistent and user-friendly interface across different devices and screen sizes.
 - **Scalability**: Develop the system with scalability in mind, allowing it to handle growing amounts of data and users.
-- **Plan**: the ability to integrate your own plan into the Navy.
 
 ## 🪛 Installation
 

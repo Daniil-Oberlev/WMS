@@ -48,6 +48,47 @@
         </li>
       </ul>
     </nav>
-    <h1 class="page__title">Страница с информацией по пользователю</h1>
+    <main class="form__login">
+      <form id="login-form" class="form__login-content" novalidate>
+        <h1>Login</h1>
+        <div class="input-box">
+          <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            data-error-message="Пожалуйста, введите корректный email адрес."
+            required
+          />
+          <i class="bx bxs-envelope"></i>
+          <span class="input-error" id="email-error"
+            >Пожалуйста, введите корректный email адрес.</span
+          >
+        </div>
+        <div class="input-box">
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            data-error-message="Введите пароль полностью."
+            minlength="5"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+          <span class="input-error" id="password-error"
+            >Введите пароль полностью.</span
+          >
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox" />Remember me</label>
+          <a href="#">Forgot password</a>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="register-link">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </main>
   </body>
 </html>

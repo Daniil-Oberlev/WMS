@@ -1,17 +1,55 @@
-import '../pages/user.css'
+import '../pages/user.css';
+import './sidebar.js';
 
-const sidebar = document.querySelector('.sidebar')
-const toggleBtn = document.querySelector('.toggle-btn')
-const listItems = document.querySelectorAll('.list-item')
+document.addEventListener('DOMContentLoaded', function () {
+  const loginForm = document.getElementById('login-form');
+  const email = document.getElementById('email');
 
-listItems.forEach((item) =>
-  item.addEventListener(
-    'click',
-    () => (
-      listItems.forEach((innerItem) => innerItem.classList.remove('active')),
-      item.classList.add('active')
-    )
-  )
-)
+  const password = document.getElementById('password');
 
-toggleBtn.addEventListener('click', () => sidebar.classList.toggle('active'))
+  const emailError = document.getElementById('email-error');
+  const passwordError = document.getElementById('password-error');
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function showError(element, errorMessage) {
+    element.classList.add('error');
+    errorMessage.style.display = 'block';
+  }
+
+  function hideError(element, errorMessage) {
+    element.classList.remove('error');
+    errorMessage.style.display = 'none';
+  }
+
+  function validateEmail() {
+    if (!emailPattern.test(email.value)) {
+      showError(email, emailError);
+    } else {
+      hideError(email, emailError);
+    }
+  }
+
+  function validatePassword() {
+    if (password.value.length < 5) {
+      showError(password, passwordError);
+    } else {
+      hideError(password, passwordError);
+    }
+  }
+
+  function validateForm(event) {
+    validateEmail();
+    validatePassword();
+
+    const errors = loginForm.querySelectorAll('.error');
+    if (errors.length > 0) {
+      event.preventDefault();
+    }
+  }
+
+  email.addEventListener('input', validateEmail);
+  password.addEventListener('input', validatePassword);
+
+  loginForm.addEventListener('submit', validateForm);
+});

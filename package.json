@@ -12,7 +12,9 @@
     "server": "nodemon index.js",
     "client": "webpack serve",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "check": "prettier . --check",
+    "format": "prettier . --write"
   },
   "author": "Daniil Prytkov, Timofey Shevchenko",
   "license": "ISC",
@@ -40,6 +42,7 @@
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.8.1",
     "postcss-loader": "^8.1.1",
+    "prettier": "3.2.5",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.2"
   }
